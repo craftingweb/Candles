@@ -14,6 +14,12 @@ li {
   list-style: none;
 }
 
+button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
 body {
   font-family: "Comfortaa", sans-serif;
   font-size: 14px;
@@ -25,8 +31,8 @@ body {
 /* font-family: "Yeseva One", serif; */
 
 .container {
-  max-width: 1180px;
-  padding: 0 10px;
+  max-width: 1200px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -41,17 +47,24 @@ body {
   align-items: center;
 }
 
-.menu {
-  text-transform: uppercase;
+.menu__btn {
+  display: none;
 }
 
 .menu__list {
   display: flex;
   gap: 20px;
+  text-transform: uppercase;
 }
 
 .footer {
   background-color: #fff;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__contacts {
@@ -78,4 +91,74 @@ body {
   height: 20px;
   left: 0;
   bottom: 0;
+}
+
+.footer__contacts .header__phone::before {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    font-size: 10px;
+  }
+  .header__phone::before {
+    background-size: cover;
+    left: 2px;
+    bottom: -3px;
+  }
+  .social {
+    justify-content: center;
+  }
+  .footer__inner {
+    flex-wrap: wrap;
+  }
+  .footer__contacts {
+    width: 100%;
+  }
+  .footer__contacts {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .footer__contacts .header__phone {
+    padding-left: 0;
+  }
+  .menu__list {
+    display: block;
+    background-color: #7b6152;
+    color: #fff8f3;
+    padding: 25px 50px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 76px;
+    transform: translateY(-1000px);
+  }
+  .menu__list-active {
+    transform: translateY(0);
+  }
+  .menu__item {
+    padding: 10px 0;
+  }
+  .menu__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .menu__btn span {
+    width: 100%;
+    height: 1px;
+    background-color: #7b6152;
+  }
+  .menu {
+    order: 1;
+  }
+  .footer .menu__list {
+    display: none;
+  }
 }
