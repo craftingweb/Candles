@@ -42,6 +42,7 @@ body {
 
 .main {
   background-color: #fff8f3;
+  overflow-x: clip;
 }
 
 .header__inner {
@@ -151,6 +152,62 @@ body {
   position: absolute;
   top: 0;
   left: 240px;
+}
+
+.about {
+  background-color: #a5978e;
+  padding: 50px 0 60px;
+  color: #fafafa;
+}
+
+.about__inner {
+  display: flex;
+  align-items: center;
+}
+
+.about__content {
+  min-width: 370px;
+}
+
+.about__title {
+  font-family: "Yeseva One";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+
+.about__text + .about__text {
+  margin-top: 20px;
+}
+
+.about__list {
+  padding-left: 110px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.about__list::before {
+  content: "";
+  background-image: url("/images/about-decor.svg");
+  position: absolute;
+  left: -20px;
+  width: 24px;
+  height: 33px;
+  bottom: -16px;
+}
+.about__list::after {
+  content: "";
+  background-color: #7b6152;
+  position: absolute;
+  left: 0;
+  width: 1000%;
+  height: 1px;
+  bottom: -2px;
 }
 
 @media (max-width: 1000px) {
