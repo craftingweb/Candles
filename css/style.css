@@ -277,6 +277,50 @@ body {
   background-color: #ffbd59;
 }
 
+.steps__list {
+  counter-reset: number;
+  gap: 70px 25px;
+}
+
+.steps__item {
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+
+.steps__item::before {
+  counter-increment: number;
+  content: "0" counter(number);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 25px;
+  color: #bea495;
+  font-family: "Yeseva One";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.steps__item:nth-child(n + 10):before {
+  counter-increment: number;
+  content: counter(number);
+}
+
+.steps__item--even::before {
+  left: auto;
+  right: 0;
+}
+
+.steps__item-text {
+  flex-basis: 175px;
+}
+
+.steps__descr {
+  max-width: 340px;
+}
+
 @media (max-width: 1000px) {
   .top__content {
     width: 340px;
@@ -298,6 +342,18 @@ body {
   }
   .products__content {
     gap: 67px;
+  }
+  .steps__list {
+    gap: 35px;
+  }
+  .steps__item {
+    gap: 0 20px;
+  }
+  .steps__item-img {
+    width: 128px;
+  }
+  .steps__item-text {
+    width: 140px;
   }
 }
 
@@ -403,6 +459,19 @@ body {
     font-size: 8px;
     margin-bottom: 8px;
   }
+  .steps__item-text {
+    width: 94px;
+    font-size: 8px;
+  }
+  .steps__item-img {
+    width: 85px;
+  }
+  .products__title {
+    font-size: 15px;
+  }
+  .products__text {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -421,6 +490,9 @@ body {
   }
   .section__content-descr {
     padding-bottom: 50px;
+  }
+  .steps__descr {
+    margin: 0 auto 20px;
   }
 }
 
@@ -496,6 +568,22 @@ body {
   }
   .products__item-text {
     padding-bottom: 9px;
+  }
+  .steps__item-text {
+    width: 72px;
+    font-size: 6px;
+  }
+  .steps__item-img {
+    width: 67px;
+  }
+  .steps__list {
+    gap: 15px 20px;
+  }
+  .steps__item {
+    gap: 0 16px;
+  }
+  .steps__item::before {
+    font-size: 12px;
   }
 }
 
