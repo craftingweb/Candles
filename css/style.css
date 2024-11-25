@@ -455,6 +455,23 @@ body {
   border-radius: 0;
 }
 
+.cetrificates__slider {
+  width: 760px;
+}
+
+.cetrificates__descr {
+  margin-right: 20px;
+}
+
+.certificates__content {
+  padding-bottom: 114px;
+}
+
+.certificates__content .swiper-pagination {
+  bottom: 50px;
+  text-align: left;
+}
+
 @media (max-width: 1000px) {
   .top__content {
     width: 340px;
