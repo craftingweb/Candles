@@ -393,6 +393,68 @@ body {
   font-size: 10px;
 }
 
+.feedback {
+  padding-top: 75px;
+}
+
+.feedback__content {
+  padding-bottom: 110px;
+}
+
+.feedback__item {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0 16px;
+  align-items: center;
+}
+
+.feedback__desc {
+  margin-right: 20px;
+}
+
+.feedback__item-link {
+  margin: 56px 0 12px;
+}
+
+.feedback__item-name {
+  font-family: "Yeseva One";
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.feedback__item-text {
+  margin-bottom: 75px;
+}
+
+.feedback__item-btn {
+  font-family: Comfortaa;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 20px 35px;
+  background-color: #ffbd59;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+
+.feedback__slider {
+  width: 760px;
+  overflow-x: hidden;
+}
+
+.feedback__content .swiper-pagination {
+  bottom: 50px;
+}
+
+.swiper-pagination-bullet {
+  height: 4px;
+  width: 50px;
+  background-color: #bea495;
+  border-radius: 0;
+}
+
 @media (max-width: 1000px) {
   .top__content {
     width: 340px;
